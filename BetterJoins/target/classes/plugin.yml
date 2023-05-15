@@ -1,0 +1,4 @@
+name: BetterJoins
+version: '1.0'
+main: me.jsinco.betterjoins.BetterJoins
+api-version: 1.19

@@ -1,0 +1,27 @@
+#placeholder %player% can be used to replace with player name
+#placeholder %joins% can be used to replace with total unique player joins
+#Unique number of players that have joined the server
+UniqueJoins: 0
+#Use the first join message? Or use normal JoinMsg?
+ShouldUseFirstJoin?: true
+#Message sent above player hotbar the 'ActionBar', RGB not supported but normal color codes will work
+JoinBarMsgText: "&aWelcome back &c%player%!"
+#The message sent when a player joins for the first time. A new line = a new line in game
+FirstJoin:
+  - "&7&m                                    "
+  - "&#3cfb1d&lP&#3cf92a&ll&#3df637&le&#3df444&la&#3ef151&ls&#3eef5e&le &#3fec6b&lw&#3fea77&le&#3fe784&ll&#40e591&lc&#40e29e&lo&#41e0ab&lm&#41ddb8&le"
+  - "&6&l%player% &#3cfb1d&lt&#3cf82b&lo &#3df639&lt&#3df347&lh&#3ef055&le &#3eed63&ls&#3feb72&le&#3fe880&lr&#40e58e&lv&#40e29c&le&#41e0aa&lr&#41ddb8&l!"
+  - "&7&m                                    "
+  - "&7&o(Total Joins: &5%joins%&7&o)"
+#Message sent when a player joins. A random message will be selected from the list upon join. If you only want 1 message, remove the other lines.
+JoinMsg:
+  - "It's a bird, it's a plane, no it's just %player%..."
+  - "Woah %player% just joined the game!"
+  - "Hey %player%, welcome back!"
+  - "%player% thanked the bus driver"
+  - "%player% omg you're back!"
+  - "%player% is back!"
+  - "Wb, %player%!"
+  - "We got %player%'s reboot card"
+  - "Hello? Hello? Is that %player%?"
+
