@@ -20,11 +20,14 @@ public class PlayerJoinLeaveTest {
         Player player = Bukkit.getPlayerExact(playerName);
 
         List<String> firstJoinMsgs = config.getStringList("FirstJoin");
-        messagesEffects.sendFirstJoinMsg(player, firstJoinMsgs);
+        messagesEffects.sendFirstJoinMsg(player, firstJoinMsgs, true);
     }
 
     public static void TestPlayerJoin(String playerName){
         Player player = Bukkit.getPlayerExact(playerName);
+
+        boolean UseTitle = config.getBoolean("UseTitle?");
+        boolean UseActionBar = config.getBoolean("UseActionBar?");
         String sounds = config.getString("Sounds");
         String particles = config.getString("ParticleType");
 
@@ -40,8 +43,8 @@ public class PlayerJoinLeaveTest {
         }
 
 
-        messagesEffects.sendTitle(player);
-        messagesEffects.sendActionBar(player);
+        if (UseTitle) messagesEffects.sendTitle(player);
+        if (UseActionBar) messagesEffects.sendActionBar(player);
 
         if (particles != null) messagesEffects.sendParticleEffect(player);
         if (sounds != null) player.playSound(player.getLocation(), Sound.valueOf(config.getString("JoinSound")), config.getInt("Volume"), config.getInt("Pitch"));

@@ -38,7 +38,7 @@ public class PlayerJoinLeave implements Listener {
             event.setJoinMessage(null); //disable default join message
 
             List<String> firstJoinMsgs = config.getStringList("FirstJoin");
-            messagesEffects.sendFirstJoinMsg(player, firstJoinMsgs);
+            messagesEffects.sendFirstJoinMsg(player, firstJoinMsgs, false);
 
             config.set("UniqueJoins", config.getInt("UniqueJoins") + 1); //count up
         } else { // normal join

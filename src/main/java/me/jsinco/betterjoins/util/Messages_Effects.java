@@ -49,9 +49,15 @@ public class Messages_Effects {
 
     }
 
-    public void sendFirstJoinMsg(Player player, List<String> firstJoinMsg) {
+    public void sendFirstJoinMsg(Player player, List<String> firstJoinMsg, boolean test) {
         for (String msg : firstJoinMsg) {
-            Bukkit.broadcastMessage(ColorUtils.translateColorCodes(msg).replace("%player%", player.getName()).replace("%joins%", String.valueOf(config.getInt("UniqueJoins"))).replace("[","").replace("]",""));
+            if (test) {
+                player.sendMessage(ColorUtils.translateColorCodes(msg).replace("%player%", player.getName()).replace("%joins%", String.valueOf(config.getInt("UniqueJoins"))).replace("[","").replace("]",""));
+
+            } else {
+                Bukkit.broadcastMessage(ColorUtils.translateColorCodes(msg).replace("%player%", player.getName()).replace("%joins%", String.valueOf(config.getInt("UniqueJoins"))).replace("[","").replace("]",""));
+
+            }
 
         }
     }
