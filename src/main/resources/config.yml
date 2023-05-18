@@ -1,0 +1,65 @@
+#Placeholder %player% can be used to replace with player name
+#Placeholder %joins% can be used to replace with total unique player joins. (Only for FirstJoin message)
+#I recommend using https://rgb.birdflop.com/ for RGB gradient colors
+
+#Unique number of players that have joined the server
+UniqueJoins: 0
+
+#Sounds, Use ALL, PLAYER, or leave blank for none. All sound types can be found here https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+#Players with /joinsounds toggled will not hear sounds.
+Sounds: ALL
+Volume: 1
+Pitch: 1
+JoinSound: BLOCK_AMETHYST_BLOCK_HIT
+#Quit sounds are optional, leave blank for none
+QuitSound: BLOCK_AMETHYST_CLUSTER_BREAK
+
+#Particles, Leave blank for none. All particle types can be found here https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+ParticleType: GLOW
+ParticleAmount: 1000
+
+UseTitle?: true
+#Max is 2 lines
+TitleMsg:
+  - "&#d6eff6Welcome back"
+  - "&#d6eff6%player%"
+#How long the title stays. Remember that 20 ticks = 1 second
+Stays: 60
+FadeIn: 2
+FadeOut: 3
+
+#Message sent above player hotbar the 'ActionBar', RGB not supported but normal color codes will work
+UseActionBar?: true
+JoinBarMsg: "&6Welcome back %player%!"
+
+#The message sent when a player joins for the first time. A new line = a new line in game
+UseFirstJoin?: true
+FirstJoin:
+  - "&7&m                                    "
+  - "&#3cfb1d&lP&#3cf92a&ll&#3df637&le&#3df444&la&#3ef151&ls&#3eef5e&le &#3fec6b&lw&#3fea77&le&#3fe784&ll&#40e591&lc&#40e29e&lo&#41e0ab&lm&#41ddb8&le"
+  - "&6&l%player% &#3cfb1d&lt&#3cf82b&lo &#3df639&lt&#3df347&lh&#3ef055&le &#3eed63&ls&#3feb72&le&#3fe880&lr&#40e58e&lv&#40e29c&le&#41e0aa&lr&#41ddb8&l!"
+  - "&7&m                                    "
+  - "&7&o(Total Joins: &5%joins%&7&o)"
+
+#Message sent when a player joins. A random message will be selected from the list upon join. If you only want 1 message, remove the other lines.
+#Prefix can be blank
+JoinPrefix: "&7[&a+&7] "
+JoinMsg:
+  - "&#f3b1cdIt's a bird! It's a plane! No it's just %player%..."
+  - "&#f8d7e8Woah %player% just joined the game!"
+  - "&#bad5f0Hey %player%, welcome back!"
+  - "&#d6eff6%player% thanked the bus driver"
+  - "&#f8efe6%player% omg you're back!"
+  - "&#c2d5a8%player% is back!"
+  - "&#a5d5d5Wb, %player%!"
+  - "&#e3a7bfWe got %player%'s reboot card"
+  - "&#b0abcbHello? Hello? Is that %player%?"
+
+#Message sent when a player quits. A random message will be selected from the list upon quit. If you only want 1 message, remove the other lines.
+#Prefix can be blank
+QuitPrefix: "&7[&c-&7] "
+QuitMsg:
+  - "&#f3b1cd%player% just left"
+  - "&#f8d7e8Who needs %player% anyways?!"
+  - "&#bad5f0Cya, %player%"
+  - "&#d6eff6Farewell, %player%"

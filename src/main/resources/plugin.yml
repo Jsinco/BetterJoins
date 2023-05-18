@@ -1,0 +1,18 @@
+name: BetterJoins
+version: 1.0
+author: Jsinco
+main: me.jsinco.betterjoins.BetterJoins
+api-version: 1.19
+commands:
+  joinsounds:
+    description: JoinSounds command
+    usage: /<command>
+  betterjoins:
+    permission: betterjoins.admin
+    description: BetterJoins command
+    usage: /<command>
+    aliases:
+      - bj
+      - joins
+
+
