@@ -1,4 +1,0 @@
-name: BetterJoins
-version: '${project.version}'
-main: me.jsinco.betterjoins.BetterJoins
-api-version: 1.19
